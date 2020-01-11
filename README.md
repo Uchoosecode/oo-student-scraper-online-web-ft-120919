@@ -1,4 +1,4 @@
-et me share my code# Object-Oriented Student Scraper
+let me share my codeet me share my code# Object-Oriented Student Scraper
 
 ## Objectives
 

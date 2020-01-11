@@ -24,14 +24,24 @@ class Scraper
     pf_url = open(profile_url)
     scrape_pf = Nokogiri::HTML(pf_url)
     
+    links = []
     student_name = scrape_pf.css(".profile-name").text
+    student_bio = scrape_pf.css(".description-holder").css("p").text
+    scraper = scrape_pf.css(".social-icon-container").css("a")
+      
+      
+    # binding.pry
     
-    info = []
-    binding.pry
-    scraped_student = {:name => student_name, }
+    
+    scraped_student = {:name => student_name, :bio => student_bio }
   end
 
 end
+
+
+#scrape_assist = scrape_pf.css(".social-icon-container") .css("a").attr("href")
+# scrape_pf.each_with_index do |info,i| links << info.css(".social-icon-container").css("a").attr("href")
+
     # scrape_pf.css(".social-icon-container").each_with_index do |social, i|
     #   info << social.css("a").attr("href").text
       
